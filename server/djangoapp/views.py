@@ -58,9 +58,14 @@ def registration(request):
         # Check if user already exists
         User.objects.get(username=username)
         username_exist = True
-    except:
+    except Exception:
         # If not, simply log this is a new user
         logger.debug("{} is new user".format(username))
+
+ #   except Exception as e:
+  #      print(f"Network exception occurred: {e}")
+
+
 
     # If it is a new user
     if not username_exist:
@@ -135,7 +140,7 @@ def add_review(request):
         try:
             response = post_review(data)
             return JsonResponse({"status": 200})
-        except:
+        except Exception:
             return JsonResponse({"status": 401,
                                  "message": "Error posting review"})
     else:
