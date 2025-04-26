@@ -62,10 +62,8 @@ def registration(request):
         # If not, simply log this is a new user
         logger.debug("{} is new user".format(username))
 
- #   except Exception as e:
-  #      print(f"Network exception occurred: {e}")
-
-
+#   except Exception as e:
+#   print(f"Network exception occurred: {e}")
 
     # If it is a new user
     if not username_exist:
