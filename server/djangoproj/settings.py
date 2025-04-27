@@ -29,10 +29,10 @@ SECRET_KEY =\
 DEBUG = True
 
 host = "https://stuartneff-8000.\
-    theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai"
+theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai"
 
-ALLOWED_HOSTS = ['localhost', {host}]
-CSRF_TRUSTED_ORIGINS = [{host}]
+ALLOWED_HOSTS = ['localhost', host]
+CSRF_TRUSTED_ORIGINS = [host]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
